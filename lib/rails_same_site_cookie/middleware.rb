@@ -21,7 +21,7 @@ module RailsSameSiteCookie
 
           cookies.each do |cookie|
             next if cookie.blank?
-            if ssl and not cookie =~ /;\s*secure/i
+            if not cookie =~ /;\s*secure/i
               cookie << '; Secure'
             end
 
